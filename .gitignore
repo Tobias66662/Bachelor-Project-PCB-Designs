@@ -1,0 +1,14 @@
+/Enose_PCB-backups
+# Ignore list for KiCAD Projects
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
