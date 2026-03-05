@@ -2158,6 +2158,17 @@
 		)
 		(uuid "9e61cc92-f4ff-4f87-b00e-40d5f1adc2d5")
 	)
+	(text "TODO:\n1. Add 200-300 Ohm resistor to gates for ESD protection (see recomended values)\n2. Add D-sub port with added ESD protection IC on input\n3. Add input protection on the mosfet input\n4. See if mosfet needs a protection diode."
+		(exclude_from_sim no)
+		(at 100.584 139.192 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b1c746be-50c8-49ab-b3ed-678b04bec060")
+	)
 	(label "PWM1"
 		(at 90.17 48.26 180)
 		(fields_autoplaced yes)
