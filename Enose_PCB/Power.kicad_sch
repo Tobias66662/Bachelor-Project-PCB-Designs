@@ -4901,9 +4901,9 @@
 		)
 		(uuid "13b36363-282d-487d-a5fd-b8fea9c38f8d")
 	)
-	(text "Uncertainties:\n- Signal ground\n- Loop Stability (is using example okay?)\n- NTC Filter\n- USB data to Battery charger\n- Too high output capcitance??\n"
+	(text "Uncertainties:\n- We Haven't yet decided on what \n   Leds or NTC thermistor to use\n- Should I add more bulk decoupling?\n"
 		(exclude_from_sim no)
-		(at 235.712 65.024 0)
+		(at 238.506 67.056 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5081,6 +5081,12 @@
 		(uuid "776f2c72-61e2-411d-b625-758a66470750")
 	)
 	(junction
+		(at 190.5 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "77c5b7f2-4bf1-44cd-894e-7885ca4472e4")
+	)
+	(junction
 		(at 72.39 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5129,7 +5135,7 @@
 		(uuid "a9c10396-8a7a-4a2a-886f-789190ca298f")
 	)
 	(junction
-		(at 128.27 101.6)
+		(at 127 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b06ace12-57b7-4b5b-9f4c-93241b9b71ac")
@@ -5157,6 +5163,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b85799de-2c90-4b56-b1ab-555ec22b1888")
+	)
+	(junction
+		(at 181.61 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b87eca6a-5760-4d06-b22c-52891481e296")
 	)
 	(junction
 		(at 234.95 100.33)
@@ -5896,7 +5908,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 101.6) (xy 128.27 101.6)
+			(xy 123.19 100.33) (xy 127 100.33)
 		)
 		(stroke
 			(width 0)
@@ -5993,6 +6005,16 @@
 			(type default)
 		)
 		(uuid "67793433-0da1-4e58-b5ec-33349a5519c3")
+	)
+	(wire
+		(pts
+			(xy 181.61 60.96) (xy 190.5 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68db0c6e-ffdb-4f31-a239-9be3cf079942")
 	)
 	(wire
 		(pts
@@ -6106,7 +6128,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 101.6) (xy 128.27 101.6)
+			(xy 132.08 100.33) (xy 127 100.33)
 		)
 		(stroke
 			(width 0)
@@ -6216,7 +6238,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 101.6) (xy 128.27 106.68)
+			(xy 127 100.33) (xy 127 105.41)
 		)
 		(stroke
 			(width 0)
@@ -6406,7 +6428,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 101.6) (xy 116.84 101.6)
+			(xy 113.03 100.33) (xy 115.57 100.33)
 		)
 		(stroke
 			(width 0)
@@ -6656,7 +6678,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 101.6) (xy 144.78 101.6)
+			(xy 139.7 100.33) (xy 143.51 100.33)
 		)
 		(stroke
 			(width 0)
@@ -7055,7 +7077,7 @@
 		(uuid "868b2942-7ef0-4496-aefa-1600a31e32cb")
 	)
 	(label "NTC1"
-		(at 128.27 106.68 270)
+		(at 127 105.41 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7095,7 +7117,7 @@
 		(uuid "c652a228-2835-4b5c-a964-7bd4c39ddb9f")
 	)
 	(label "VRNTC"
-		(at 144.78 101.6 0)
+		(at 143.51 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7870,7 +7892,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 137.16 101.6 90)
+		(at 135.89 100.33 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7879,7 +7901,7 @@
 		(fields_autoplaced yes)
 		(uuid "13947842-f8be-42fe-bd76-9ddd052a626d")
 		(property "Reference" "R10"
-			(at 137.16 95.25 90)
+			(at 135.89 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7887,7 +7909,7 @@
 			)
 		)
 		(property "Value" "10k(1%)"
-			(at 137.16 97.79 90)
+			(at 135.89 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7895,7 +7917,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 103.378 90)
+			(at 135.89 102.108 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7904,7 +7926,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 137.16 101.6 0)
+			(at 135.89 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7913,7 +7935,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 137.16 101.6 0)
+			(at 135.89 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8704,7 +8726,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "75k"
 			(at 212.09 68.5799 0)
 			(effects
 				(font
@@ -8959,7 +8981,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 128.27 106.68 270)
+		(at 127 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8968,7 +8990,7 @@
 		(fields_autoplaced yes)
 		(uuid "3c1206d6-6dd7-4bbb-b007-ef46ff97a5ab")
 		(property "Reference" "TP3"
-			(at 133.35 105.4099 90)
+			(at 132.08 104.1399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8977,7 +8999,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 133.35 107.9499 90)
+			(at 132.08 106.6799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8986,7 +9008,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 111.76 0)
+			(at 127 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8995,7 +9017,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 128.27 111.76 0)
+			(at 127 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9004,7 +9026,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 128.27 106.68 0)
+			(at 127 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9504,7 +9526,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "5.6nF"
 			(at 213.36 59.6899 0)
 			(effects
 				(font
@@ -11200,7 +11222,7 @@
 	)
 	(symbol
 		(lib_id "Device:Thermistor_NTC")
-		(at 120.65 101.6 270)
+		(at 119.38 100.33 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11209,7 +11231,7 @@
 		(fields_autoplaced yes)
 		(uuid "89cdb8c4-1bed-4d6e-9161-c3f71b061a50")
 		(property "Reference" "TH1"
-			(at 120.3325 93.98 90)
+			(at 119.0625 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11217,7 +11239,7 @@
 			)
 		)
 		(property "Value" "Thermistor_NTC (10k)"
-			(at 120.3325 96.52 90)
+			(at 119.0625 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11225,7 +11247,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 101.6 0)
+			(at 120.65 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11234,7 +11256,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 101.6 0)
+			(at 120.65 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11243,7 +11265,7 @@
 			)
 		)
 		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
-			(at 120.65 101.6 0)
+			(at 119.38 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12431,7 +12453,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 114.3 101.6 270)
+		(at 113.03 100.33 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12440,7 +12462,7 @@
 		(fields_autoplaced yes)
 		(uuid "b64da4f8-3773-4493-825c-529e7f46a970")
 		(property "Reference" "#PWR054"
-			(at 107.95 101.6 0)
+			(at 106.68 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12449,7 +12471,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 110.49 101.5999 90)
+			(at 109.22 100.3299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12458,7 +12480,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 114.3 101.6 0)
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12467,7 +12489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 101.6 0)
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12476,7 +12498,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 114.3 101.6 0)
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13456,7 +13478,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "DNP"
 			(at 226.06 63.4999 0)
 			(effects
 				(font
