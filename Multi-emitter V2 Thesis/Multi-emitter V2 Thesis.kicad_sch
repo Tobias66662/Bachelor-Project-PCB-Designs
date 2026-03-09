@@ -1198,6 +1198,180 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:LED"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -2097,9 +2271,21 @@
 		)
 		(uuid db172dc0-b07e-4bb3-a53f-ca192df59b6b)
 	)
-	(text "Notes:\n1. PWM inputs typical signal behaviour is either off state or 100-115 kHz 50% duty cycle square wave.\n2. VCC should be between 13-16V.\n3. Dangerous scenario if PWM inputs are too high/low frequencies."
+	(rectangle
+		(start 96.52 124.46)
+		(end 115.57 162.56)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid ee16f61e-b731-49e3-99ab-48abdf2ce6b7)
+	)
+	(text "Notes:\n1. PWM inputs typical signal behaviour is either off state or 100-115 kHz 50% duty cycle square wave.\n2. VCC should be between 13-16V.\n3. Dangerous scenario if PWM inputs are too high/low frequencies.\n4. N-mos gates include ESD protection."
 		(exclude_from_sim no)
-		(at 178.308 170.18 0)
+		(at 178.308 172.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2130,9 +2316,9 @@
 		)
 		(uuid "9e61cc92-f4ff-4f87-b00e-40d5f1adc2d5")
 	)
-	(text "TODO:\n2. Add LED indicator for power\nDisregarded circuit ideas:\n1.complex emitter driver circuit (ideal sine wave for ideal driving)\n2. BP filter on input to act as protection from too low or too high frequencies \n(it will distort the pwm signal which would aquire a shcmitt trigger to restore the vertical square wave edges which makes it more complex and costly)\n3. Removed ESD protection on Dsub input since mosfet gates already have integrated esd protection. \nThe power line doesn't need esd protection since it's not going to any sensitive components.\n4. SC protection with PPTC or fuse (could not find an ideal component)"
+	(text "Discarded circuit ideas:\n1. Complex emitter driver circuit (ideal sine wave for ideal driving)\n2. BP filter on input to act as protection from too low or too high frequencies \n(it will distort the pwm signal which would aquire a shcmitt trigger to restore the vertical square wave edges which makes it more complex and costly)\n3. Removed ESD protection on Dsub input since mosfet gates already have integrated esd protection. \nThe power line doesn't need esd protection since it's not going to any sensitive components.\n4. SC protection with PPTC or fuse (could not find an ideal component)"
 		(exclude_from_sim no)
-		(at 100.584 139.192 0)
+		(at 127 138.684 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2140,6 +2326,22 @@
 			(justify left)
 		)
 		(uuid "b1c746be-50c8-49ab-b3ed-678b04bec060")
+	)
+	(text "Power Indicator Diode"
+		(exclude_from_sim no)
+		(at 105.918 164.846 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ff52c17e-7906-4280-beec-a357ccc1469f")
+	)
+	(junction
+		(at 167.64 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10c107bc-5c4a-427d-bc58-56e3eeb471bd")
 	)
 	(junction
 		(at 39.37 49.53)
@@ -2176,18 +2378,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "718afe35-f83d-4776-a645-1317b571ba8c")
-	)
-	(junction
-		(at 167.64 109.2853)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a2843b4-30d1-4925-a069-d1bb7bc8ff92")
-	)
-	(junction
-		(at 167.64 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8118f6e3-b59d-4629-b57a-fde212107178")
 	)
 	(junction
 		(at 241.3 36.83)
@@ -2299,7 +2489,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 142.24) (xy 60.96 142.24)
+			(xy 55.88 142.24) (xy 60.96 142.24)
 		)
 		(stroke
 			(width 0)
@@ -2339,6 +2529,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 109.22) (xy 167.64 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "124d47f3-cd56-4a1c-8b84-0496df6b489b")
+	)
+	(wire
+		(pts
 			(xy 154.94 97.79) (xy 167.64 97.79)
 		)
 		(stroke
@@ -2346,6 +2546,26 @@
 			(type default)
 		)
 		(uuid "12d74b98-a185-4497-8788-082bda06278d")
+	)
+	(wire
+		(pts
+			(xy 105.41 151.13) (xy 105.41 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "138b1795-ad88-48c5-bdaa-a6d214e84b8b")
+	)
+	(wire
+		(pts
+			(xy 167.64 97.79) (xy 170.18 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15380b0c-7101-46a1-85d0-ea84d309a534")
 	)
 	(wire
 		(pts
@@ -2396,6 +2616,16 @@
 			(type default)
 		)
 		(uuid "1fc9e9f0-1243-4305-9af1-e8a320f9c26e")
+	)
+	(wire
+		(pts
+			(xy 105.41 133.35) (xy 105.41 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "209f40c3-f9ce-45cd-8541-ec21fa234d4b")
 	)
 	(wire
 		(pts
@@ -2506,16 +2736,6 @@
 			(type default)
 		)
 		(uuid "3b46fd8a-0c4e-4148-9d5b-d66cc97b5436")
-	)
-	(wire
-		(pts
-			(xy 167.64 109.22) (xy 167.64 109.2853)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b4c7b95-17d2-41be-8d66-34510dca0739")
 	)
 	(wire
 		(pts
@@ -2799,13 +3019,13 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 101.6) (xy 167.64 97.79)
+			(xy 167.64 97.79) (xy 167.64 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "856ce3a9-94a7-4c21-a6bc-3fad010f2119")
+		(uuid "7a08301b-053d-49cb-8c17-249a49b23ec6")
 	)
 	(wire
 		(pts
@@ -2859,16 +3079,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 109.2853) (xy 167.64 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9555d539-bc80-49ae-8667-74b2373b3c75")
-	)
-	(wire
-		(pts
 			(xy 241.3 83.82) (xy 241.3 86.36)
 		)
 		(stroke
@@ -2886,16 +3096,6 @@
 			(type default)
 		)
 		(uuid "99d8e5ba-b500-4ff8-9277-1a5d0e0d4189")
-	)
-	(wire
-		(pts
-			(xy 167.64 97.79) (xy 170.18 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a83dc3f-2089-4cd7-81b6-5a5b58b4f773")
 	)
 	(wire
 		(pts
@@ -3209,7 +3409,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 133.35) (xy 60.96 133.35)
+			(xy 55.88 133.35) (xy 60.96 133.35)
 		)
 		(stroke
 			(width 0)
@@ -3468,6 +3668,72 @@
 		(uuid "f74af8c5-d67f-4c71-b476-28f539af4cf8")
 	)
 	(symbol
+		(lib_id "power:+15V")
+		(at 105.41 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0086cc3c-dfe0-47a4-9ab5-fa0c6eb3c289")
+		(property "Reference" "#PWR034"
+			(at 105.41 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 105.41 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+15V\""
+			(at 105.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bd0ec0a1-cb7d-413a-a893-6c9edd0fa044")
+		)
+		(instances
+			(project "Multi-emitter V2 Thesis"
+				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 267.97 36.83 0)
 		(unit 1)
@@ -3535,7 +3801,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 49.53 142.24 270)
+		(at 55.88 142.24 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3544,7 +3810,7 @@
 		(fields_autoplaced yes)
 		(uuid "06634fd7-cb0d-4918-be61-9210e20e8266")
 		(property "Reference" "#PWR063"
-			(at 43.18 142.24 0)
+			(at 49.53 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3553,7 +3819,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 45.72 142.2399 90)
+			(at 52.07 142.2399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3562,7 +3828,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 142.24 0)
+			(at 55.88 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3571,7 +3837,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 142.24 0)
+			(at 55.88 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3580,7 +3846,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 142.24 0)
+			(at 55.88 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3679,7 +3945,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0b6db7bd-c7a4-4bc8-8c13-0bc7283c15a2")
-		(property "Reference" "C8"
+		(property "Reference" "C5"
 			(at 62.23 81.28 90)
 			(effects
 				(font
@@ -3731,7 +3997,7 @@
 		(instances
 			(project "Multi-emitter V2 Thesis"
 				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
-					(reference "C8")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -4659,7 +4925,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 269.24 140.97 0)
+		(at 33.02 184.15 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -4668,7 +4934,7 @@
 		(fields_autoplaced yes)
 		(uuid "3c1bbe92-f9ff-4394-8d8c-eab1970ef53a")
 		(property "Reference" "H3"
-			(at 271.78 140.9699 0)
+			(at 35.56 184.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4677,7 +4943,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 271.78 142.2399 0)
+			(at 35.56 185.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4687,7 +4953,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4696,7 +4962,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4705,7 +4971,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4714,7 +4980,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4723,7 +4989,7 @@
 			)
 		)
 		(property "Sim.Library" ""
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4732,7 +4998,7 @@
 			)
 		)
 		(property "Sim.Name" ""
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4741,7 +5007,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 269.24 140.97 0)
+			(at 33.02 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4826,7 +5092,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 259.08 140.97 0)
+		(at 22.86 184.15 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -4835,7 +5101,7 @@
 		(fields_autoplaced yes)
 		(uuid "3d5e3bea-2eba-4bf9-b0b9-25edc0bd646b")
 		(property "Reference" "H1"
-			(at 261.62 140.9699 0)
+			(at 25.4 184.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4844,7 +5110,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 261.62 142.2399 0)
+			(at 25.4 185.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4854,7 +5120,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4863,7 +5129,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4872,7 +5138,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4881,7 +5147,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4890,7 +5156,7 @@
 			)
 		)
 		(property "Sim.Library" ""
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4899,7 +5165,7 @@
 			)
 		)
 		(property "Sim.Name" ""
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4908,7 +5174,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 259.08 140.97 0)
+			(at 22.86 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4993,7 +5259,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 167.64 105.4753 0)
+		(at 167.64 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5002,7 +5268,7 @@
 		(fields_autoplaced yes)
 		(uuid "405cd87d-cdcf-4e8d-b096-640f6f7fdb3d")
 		(property "Reference" "R7"
-			(at 170.18 104.2052 0)
+			(at 170.18 104.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5011,7 +5277,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 170.18 106.7452 0)
+			(at 170.18 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5020,7 +5286,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 165.862 105.4753 90)
+			(at 165.862 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5029,7 +5295,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 105.4753 0)
+			(at 167.64 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5038,7 +5304,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 167.64 105.4753 0)
+			(at 167.64 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5056,6 +5322,112 @@
 			(project "Multi-emitter V2 Thesis"
 				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 105.41 147.32 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4461dd01-6f16-4b25-af0e-154f2d66631b")
+		(property "Reference" "D2"
+			(at 109.22 147.6374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 109.22 150.1774 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" ""
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" ""
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 105.41 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "89e46482-6d0b-4481-ab01-db201d763611")
+		)
+		(pin "1"
+			(uuid "b19f3743-be49-40da-a2c0-90ca2d57f4a0")
+		)
+		(instances
+			(project "Multi-emitter V2 Thesis"
+				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -5480,7 +5852,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53fd466f-c23b-4bc7-a0b4-4c92af8cb62f")
-		(property "Reference" "C6"
+		(property "Reference" "C7"
 			(at 190.5 80.01 90)
 			(effects
 				(font
@@ -5532,7 +5904,7 @@
 		(instances
 			(project "Multi-emitter V2 Thesis"
 				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -5742,6 +6114,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 105.41 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a18c156-6379-43e7-bc60-c299427b62fe")
+		(property "Reference" "#PWR031"
+			(at 105.41 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 105.41 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f4694af-2284-46f5-8c85-0e0a187e88dd")
+		)
+		(instances
+			(project "Multi-emitter V2 Thesis"
+				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 102.87 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5808,7 +6246,7 @@
 	)
 	(symbol
 		(lib_id "power:+15V")
-		(at 49.53 133.35 90)
+		(at 55.88 133.35 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5817,7 +6255,7 @@
 		(fields_autoplaced yes)
 		(uuid "710ed385-67ee-4ec2-bd37-16fffa97148c")
 		(property "Reference" "#PWR062"
-			(at 53.34 133.35 0)
+			(at 59.69 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5826,7 +6264,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 48.26 130.81 90)
+			(at 54.61 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5834,7 +6272,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 133.35 0)
+			(at 55.88 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5843,7 +6281,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 133.35 0)
+			(at 55.88 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5852,7 +6290,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+15V\""
-			(at 49.53 133.35 0)
+			(at 55.88 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6389,7 +6827,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "86dfe127-1d58-4441-9e5c-dc14657171f4")
-		(property "Reference" "C7"
+		(property "Reference" "C6"
 			(at 125.73 80.01 90)
 			(effects
 				(font
@@ -6441,7 +6879,77 @@
 		(instances
 			(project "Multi-emitter V2 Thesis"
 				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
-					(reference "C7")
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 105.41 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c60866a-900f-4b32-8c77-39c7ce944c96")
+		(property "Reference" "R9"
+			(at 107.95 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 107.95 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 103.632 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 105.41 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b7898ca6-3728-424f-9caa-ad8fedcebe44")
+		)
+		(pin "1"
+			(uuid "0d0bc7c8-f37d-4c25-9f65-93214df5c795")
+		)
+		(instances
+			(project "Multi-emitter V2 Thesis"
+				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -7663,7 +8171,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 269.24 147.32 0)
+		(at 33.02 190.5 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -7672,7 +8180,7 @@
 		(fields_autoplaced yes)
 		(uuid "b72909d6-66ef-4056-8c07-a2488ebda9ac")
 		(property "Reference" "H4"
-			(at 271.78 147.3199 0)
+			(at 35.56 190.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7681,7 +8189,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 271.78 148.5899 0)
+			(at 35.56 191.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7691,7 +8199,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7700,7 +8208,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7709,7 +8217,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7718,7 +8226,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7727,7 +8235,7 @@
 			)
 		)
 		(property "Sim.Library" ""
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7736,7 +8244,7 @@
 			)
 		)
 		(property "Sim.Name" ""
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7745,7 +8253,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 269.24 147.32 0)
+			(at 33.02 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8974,7 +9482,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ed6e3a82-8143-4bba-8971-8bc429cb7662")
-		(property "Reference" "C5"
+		(property "Reference" "C8"
 			(at 254 78.74 90)
 			(effects
 				(font
@@ -9026,7 +9534,7 @@
 		(instances
 			(project "Multi-emitter V2 Thesis"
 				(path "/00fac03e-ba0a-4405-a7f3-43b4e360d5a0"
-					(reference "C5")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -9303,7 +9811,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 259.08 147.32 0)
+		(at 22.86 190.5 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -9312,7 +9820,7 @@
 		(fields_autoplaced yes)
 		(uuid "ff9a18b9-8b78-45cb-bc8d-24966558cfff")
 		(property "Reference" "H2"
-			(at 261.62 147.3199 0)
+			(at 25.4 190.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9321,7 +9829,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 261.62 148.5899 0)
+			(at 25.4 191.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9331,7 +9839,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9340,7 +9848,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9349,7 +9857,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9358,7 +9866,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9367,7 +9875,7 @@
 			)
 		)
 		(property "Sim.Library" ""
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9376,7 +9884,7 @@
 			)
 		)
 		(property "Sim.Name" ""
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9385,7 +9893,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 259.08 147.32 0)
+			(at 22.86 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
