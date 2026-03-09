@@ -5082,8 +5082,8 @@
 		)
 	)
 	(rectangle
-		(start 100.33 72.39)
-		(end 160.02 111.76)
+		(start 91.44 72.39)
+		(end 157.48 113.03)
 		(stroke
 			(width 0)
 			(type dash_dot)
@@ -5093,9 +5093,20 @@
 		)
 		(uuid 11bec8e0-5bde-4451-92eb-e596bf6de570)
 	)
-	(text "Fan Power"
+	(text "Notes:\nFan is controlled via GPI06.\nSIM reset is controlled via...\nLEDs controlled via...\nPWM1, PWM2, ..., PWM8 controlled via..."
 		(exclude_from_sim no)
-		(at 129.032 113.792 0)
+		(at 178.308 171.958 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1c3977d1-10c9-4e7b-ab10-57ec0472d247")
+	)
+	(text "Fan Power + Control"
+		(exclude_from_sim no)
+		(at 124.206 115.316 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6946,6 +6957,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 115.57 90.17 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51a1afba-d7e0-4bf1-8f97-a5c948451ac8")
+		(property "Reference" "#PWR069"
+			(at 119.38 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GPI06(Fan Control)"
+			(at 111.76 90.1699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 115.57 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fdec4543-b4ea-488c-aab6-08db67386d82")
+		)
+		(instances
+			(project "Enose_PCB"
+				(path "/eef70be0-4107-491c-8ca0-465071a6397e"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 33.02 39.37 0)
 		(unit 1)
@@ -7774,73 +7852,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 115.57 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "729fe00a-7055-4b7b-82f5-52230701ea45")
-		(property "Reference" "#PWR069"
-			(at 119.38 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "(TODO) attach some esp32 pin here"
-			(at 111.76 90.1699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115.57 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 115.57 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c63aeb68-ee11-4956-9850-dc49f37319ac")
-		)
-		(instances
-			(project "Enose_PCB"
-				(path "/eef70be0-4107-491c-8ca0-465071a6397e"
-					(reference "#PWR069")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 220.98 152.4 0)
 		(unit 1)
@@ -8641,6 +8652,73 @@
 			(project "Enose_PCB"
 				(path "/eef70be0-4107-491c-8ca0-465071a6397e"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 38.1 66.04 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7fe7509-dcd8-48eb-b2d0-2eb30e1fba71")
+		(property "Reference" "#PWR070"
+			(at 41.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GPI06(Fan Control)"
+			(at 34.29 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 38.1 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "03b6e14c-60da-484b-922f-a340ad278861")
+		)
+		(instances
+			(project "Enose_PCB"
+				(path "/eef70be0-4107-491c-8ca0-465071a6397e"
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
