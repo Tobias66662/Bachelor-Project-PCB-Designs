@@ -8702,7 +8702,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94e519f7-7ad7-4133-8901-6be6318d90e6")
-		(property "Reference" "D?"
+		(property "Reference" "D13"
 			(at 52.07 135.8899 90)
 			(effects
 				(font
@@ -8756,7 +8756,7 @@
 		(instances
 			(project ""
 				(path "/eef70be0-4107-491c-8ca0-465071a6397e/2117c019-44e0-44cf-b334-dcd1316d0701"
-					(reference "D?")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -8987,7 +8987,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "680"
 			(at 213.36 134.6199 0)
 			(effects
 				(font
@@ -10352,7 +10352,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "680"
 			(at 265.43 132.0799 0)
 			(effects
 				(font
