@@ -226,7 +226,24 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|2565400|1257300|9bf8649f-f2a2-471a-bdec-b4f9c836180f|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "multiple_net_names|1460500|1333500|9a9659d5-7789-453d-b96a-ac4a2ab36cb2|700cae4c-0970-41b6-b730-ea87a93e46dd|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1117600|1295400|9a9659d5-7789-453d-b96a-ac4a2ab36cb2|00000000-0000-0000-0000-000000000000|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1790700|1117600|d70ea389-0612-4c3f-b49f-f10b0bac1cb0|00000000-0000-0000-0000-000000000000|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41|/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -447,8 +464,12 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "SamacSys_Parts"
+    ],
+    "pinned_symbol_libs": [
+      "SamacSys_Parts"
+    ]
   },
   "meta": {
     "filename": "Enose_PCB.kicad_pro",

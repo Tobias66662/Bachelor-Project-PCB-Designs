@@ -4235,8 +4235,8 @@
 		(uuid 30be098d-f791-43ec-8764-1dc3199963a2)
 	)
 	(rectangle
-		(start 25.4 104.14)
-		(end 91.44 171.45)
+		(start 21.59 90.17)
+		(end 87.63 157.48)
 		(stroke
 			(width 0)
 			(type default)
@@ -4284,7 +4284,7 @@
 	)
 	(text "Antennas"
 		(exclude_from_sim no)
-		(at 75.184 166.624 0)
+		(at 71.374 152.654 0)
 		(effects
 			(font
 				(size 2 2)
@@ -4293,6 +4293,19 @@
 			)
 		)
 		(uuid "afd57758-26d5-4893-98c3-23136046d6b6")
+	)
+	(text "Note:\n- In input decoupling might be exsessive, since we aren't using EDGE or GPRS mode \n- The module operates with 1.8,V logic levels and therefore requires level\n   shifters for communication with the ESP32 (3.3,V logic)\n- The selected antenna already has 50ohm impedance, \n   elieminating the need for impedance matching circuitry"
+		(exclude_from_sim no)
+		(at 178.816 173.482 0)
+		(effects
+			(font
+				(size 1.36 1.36)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "d7a72179-a0ad-402f-83fe-2e8741fc27b1")
 	)
 	(junction
 		(at 149.86 38.1)
@@ -4547,7 +4560,7 @@
 		(uuid "d65339a1-171e-4dee-a315-d5de79d6685f")
 	)
 	(junction
-		(at 48.26 151.13)
+		(at 44.45 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d9137bc3-6698-48d1-9d7d-0c8a5a987bc4")
@@ -4655,6 +4668,10 @@
 		(uuid "9ce333f1-f158-4e20-92c9-0c1987d1f7be")
 	)
 	(no_connect
+		(at 148.59 58.42)
+		(uuid "d3d587f5-a25e-4982-8196-a4d6dc009530")
+	)
+	(no_connect
 		(at 102.87 53.34)
 		(uuid "d50c2594-49cf-4195-a1da-59cf4d2050dc")
 	)
@@ -4726,7 +4743,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 151.13) (xy 48.26 151.13)
+			(xy 39.37 137.16) (xy 44.45 137.16)
 		)
 		(stroke
 			(width 0)
@@ -4936,7 +4953,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 114.3) (xy 49.53 114.3)
+			(xy 44.45 100.33) (xy 45.72 100.33)
 		)
 		(stroke
 			(width 0)
@@ -5266,7 +5283,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 151.13) (xy 50.8 151.13)
+			(xy 44.45 137.16) (xy 46.99 137.16)
 		)
 		(stroke
 			(width 0)
@@ -5296,7 +5313,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 139.7) (xy 48.26 140.97)
+			(xy 44.45 125.73) (xy 44.45 127)
 		)
 		(stroke
 			(width 0)
@@ -5776,7 +5793,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 148.59) (xy 48.26 151.13)
+			(xy 44.45 134.62) (xy 44.45 137.16)
 		)
 		(stroke
 			(width 0)
@@ -5955,7 +5972,7 @@
 		(uuid "3461fee1-ccff-4000-8de2-2722c32b48ba")
 	)
 	(label "GNSS_ANT"
-		(at 48.26 114.3 180)
+		(at 44.45 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6055,7 +6072,7 @@
 		(uuid "a0a3356e-53c0-462d-90fa-9e80387619b4")
 	)
 	(label "RF_ANT"
-		(at 43.18 151.13 180)
+		(at 39.37 137.16 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6162,7 +6179,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 48.26 139.7 180)
+		(at 44.45 125.73 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6171,7 +6188,7 @@
 		(fields_autoplaced yes)
 		(uuid "02a6be37-2f29-466b-8314-f00b2d8e4dea")
 		(property "Reference" "#PWR016"
-			(at 48.26 133.35 0)
+			(at 44.45 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6180,7 +6197,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 134.62 0)
+			(at 44.45 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6188,7 +6205,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 139.7 0)
+			(at 44.45 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6197,7 +6214,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 139.7 0)
+			(at 44.45 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6206,7 +6223,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 48.26 139.7 0)
+			(at 44.45 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6252,7 +6269,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 48.26 47.752 90)
 			(effects
 				(font
@@ -6457,7 +6474,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 97.4852 59.69 0)
 			(effects
 				(font
@@ -6533,7 +6550,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 84.582 55.88 90)
 			(effects
 				(font
@@ -6607,7 +6624,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 247.65 141.478 90)
 			(effects
 				(font
@@ -7023,7 +7040,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
 			(at 102.87 73.66 0)
 			(effects
 				(font
@@ -7130,7 +7147,7 @@
 	)
 	(symbol
 		(lib_id "U.FL-R-SMT_01_:U.FL-R-SMT_01_")
-		(at 59.69 116.84 0)
+		(at 55.88 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7139,7 +7156,7 @@
 		(fields_autoplaced yes)
 		(uuid "42206a0e-2c7b-4806-8e39-0ba88158503e")
 		(property "Reference" "J7"
-			(at 66.04 115.8239 0)
+			(at 62.23 101.8539 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7148,7 +7165,7 @@
 			)
 		)
 		(property "Value" "U.FL-R-SMT_01_"
-			(at 66.04 118.3639 0)
+			(at 62.23 104.3939 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7157,7 +7174,7 @@
 			)
 		)
 		(property "Footprint" "U.FL-R-SMT_01_:HRS_U.FL-R-SMT_01_"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7167,7 +7184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7176,7 +7193,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7185,7 +7202,7 @@
 			)
 		)
 		(property "MF" "Hirose"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7195,7 +7212,7 @@
 			)
 		)
 		(property "DESCRIPTION" "U.FL Series 6 Ghz 50 Ohm Ultra-small SMT Coaxial Cable Receptacle"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7205,7 +7222,7 @@
 			)
 		)
 		(property "PACKAGE" "None"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7215,7 +7232,7 @@
 			)
 		)
 		(property "PRICE" "0.84 USD"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7225,7 +7242,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7235,7 +7252,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/U.FL-R-SMT(01)/Hirose+Electric+Co+Ltd/view-part/?ref=eda"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7245,7 +7262,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7255,7 +7272,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/U.FL-R-SMT(01)/Hirose+Electric+Co+Ltd/view-part/?ref=snap"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7265,7 +7282,7 @@
 			)
 		)
 		(property "MP" "U.FL-R-SMT(01)"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7275,7 +7292,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7285,7 +7302,7 @@
 			)
 		)
 		(property "AVAILABILITY" "Good"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7295,7 +7312,7 @@
 			)
 		)
 		(property "Description_1" "U.FL (UMCC) Connector Receptacle, Male Pin 50Ohm Surface Mount Solder. RF Connectors / Coaxial Connectors"
-			(at 59.69 116.84 0)
+			(at 55.88 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7316,6 +7333,10 @@
 		(instances
 			(project ""
 				(path "/eef70be0-4107-491c-8ca0-465071a6397e/2117c019-44e0-44cf-b334-dcd1316d0701"
+					(reference "J7")
+					(unit 1)
+				)
+				(path "/eef70be0-4107-491c-8ca0-465071a6397e/c704ca63-8ab0-46ce-942e-504221cfea41"
 					(reference "J7")
 					(unit 1)
 				)
@@ -7426,7 +7447,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 71.882 50.8 90)
 			(effects
 				(font
@@ -7568,7 +7589,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 214.63 120.65 0)
 			(effects
 				(font
@@ -7647,7 +7668,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SamacSys_Parts:CAPAE530X610N"
 			(at 206.0448 24.13 0)
 			(effects
 				(font
@@ -7721,7 +7742,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 199.39 74.168 90)
 			(effects
 				(font
@@ -7765,7 +7786,7 @@
 	)
 	(symbol
 		(lib_id "U.FL-R-SMT_01_:U.FL-R-SMT_01_")
-		(at 60.96 153.67 0)
+		(at 57.15 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7774,7 +7795,7 @@
 		(fields_autoplaced yes)
 		(uuid "5b5226cc-4f34-47cc-8b22-55965ee02d82")
 		(property "Reference" "J8"
-			(at 67.31 152.6539 0)
+			(at 63.5 138.6839 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7783,7 +7804,7 @@
 			)
 		)
 		(property "Value" "U.FL-R-SMT_01_"
-			(at 67.31 155.1939 0)
+			(at 63.5 141.2239 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7792,7 +7813,7 @@
 			)
 		)
 		(property "Footprint" "U.FL-R-SMT_01_:HRS_U.FL-R-SMT_01_"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7802,7 +7823,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7811,7 +7832,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7820,7 +7841,7 @@
 			)
 		)
 		(property "MF" "Hirose"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7830,7 +7851,7 @@
 			)
 		)
 		(property "DESCRIPTION" "U.FL Series 6 Ghz 50 Ohm Ultra-small SMT Coaxial Cable Receptacle"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7840,7 +7861,7 @@
 			)
 		)
 		(property "PACKAGE" "None"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7850,7 +7871,7 @@
 			)
 		)
 		(property "PRICE" "0.84 USD"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7860,7 +7881,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7870,7 +7891,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/U.FL-R-SMT(01)/Hirose+Electric+Co+Ltd/view-part/?ref=eda"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7880,7 +7901,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7890,7 +7911,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/U.FL-R-SMT(01)/Hirose+Electric+Co+Ltd/view-part/?ref=snap"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7900,7 +7921,7 @@
 			)
 		)
 		(property "MP" "U.FL-R-SMT(01)"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7910,7 +7931,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7920,7 +7941,7 @@
 			)
 		)
 		(property "AVAILABILITY" "Good"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7930,7 +7951,7 @@
 			)
 		)
 		(property "Description_1" "U.FL (UMCC) Connector Receptacle, Male Pin 50Ohm Surface Mount Solder. RF Connectors / Coaxial Connectors"
-			(at 60.96 153.67 0)
+			(at 57.15 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7982,7 +8003,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 194.31 70.358 90)
 			(effects
 				(font
@@ -8049,7 +8070,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder"
 			(at 220.98 34.798 90)
 			(effects
 				(font
@@ -8188,7 +8209,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 81.28 77.978 90)
 			(effects
 				(font
@@ -8333,7 +8354,7 @@
 				)
 			)
 		)
-		(property "Footprint" "22293332"
+		(property "Footprint" "2229333-2:22293332"
 			(at 270.51 160.96 0)
 			(effects
 				(font
@@ -8570,7 +8591,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 257.81 146.812 90)
 			(effects
 				(font
@@ -8766,7 +8787,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
-		(at 48.26 144.78 270)
+		(at 44.45 130.81 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8775,7 +8796,7 @@
 		(fields_autoplaced yes)
 		(uuid "94e519f7-7ad7-4133-8901-6be6318d90e6")
 		(property "Reference" "D13"
-			(at 50.8 143.5099 90)
+			(at 46.99 129.5399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8784,7 +8805,7 @@
 			)
 		)
 		(property "Value" "0402ESDA-AEC1"
-			(at 50.8 146.0499 90)
+			(at 46.99 132.0799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8793,7 +8814,7 @@
 			)
 		)
 		(property "Footprint" "0402ESDA-AEC1:0402ESDAAEC1"
-			(at 48.26 144.78 0)
+			(at 44.45 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8802,7 +8823,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-0402esda-aec-automotive-esd-suppressor-data-sheet.pdf"
-			(at 48.26 144.78 0)
+			(at 44.45 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8811,7 +8832,7 @@
 			)
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 48.26 144.78 0)
+			(at 44.45 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8932,7 +8953,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 194.31 80.518 90)
 			(effects
 				(font
@@ -9001,7 +9022,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
 			(at 151.13 45.72 0)
 			(effects
 				(font
@@ -9068,7 +9089,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 212.852 130.81 90)
 			(effects
 				(font
@@ -9105,73 +9126,6 @@
 			(project "Enose_PCB"
 				(path "/eef70be0-4107-491c-8ca0-465071a6397e/2117c019-44e0-44cf-b334-dcd1316d0701"
 					(reference "R25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 148.59 58.42 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b702ba70-fbf4-4080-a6e4-a61d12cfa508")
-		(property "Reference" "TP7"
-			(at 153.67 57.1499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 153.67 59.6899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 148.59 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 148.59 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 148.59 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "eb37a747-b335-48ea-8917-8887ea0d1259")
-		)
-		(instances
-			(project ""
-				(path "/eef70be0-4107-491c-8ca0-465071a6397e/2117c019-44e0-44cf-b334-dcd1316d0701"
-					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -9574,7 +9528,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 49.53 119.38 270)
+		(at 45.72 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9582,7 +9536,7 @@
 		(dnp no)
 		(uuid "c296b3e7-ea73-4ae4-8414-310c0149f8fb")
 		(property "Reference" "#PWR021"
-			(at 43.18 119.38 0)
+			(at 39.37 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9591,7 +9545,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.958 119.38 0)
+			(at 41.148 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9599,7 +9553,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 119.38 0)
+			(at 45.72 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9608,7 +9562,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 119.38 0)
+			(at 45.72 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9617,7 +9571,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 119.38 0)
+			(at 45.72 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9729,7 +9683,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
 			(at 102.87 76.2 0)
 			(effects
 				(font
@@ -9794,7 +9748,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 205.74 146.812 90)
 			(effects
 				(font
@@ -9933,7 +9887,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 195.58 141.478 90)
 			(effects
 				(font
@@ -10003,7 +9957,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
 			(at 144.78 26.67 0)
 			(effects
 				(font
@@ -10221,7 +10175,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 224.4852 63.5 0)
 			(effects
 				(font
@@ -10291,7 +10245,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SamacSys_Parts:CAPAE530X610N"
 			(at 194.6148 24.13 0)
 			(effects
 				(font
@@ -10433,7 +10387,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 264.922 130.81 90)
 			(effects
 				(font
@@ -10503,7 +10457,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 266.7 120.65 0)
 			(effects
 				(font
@@ -10725,7 +10679,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 174.9552 31.75 0)
 			(effects
 				(font
@@ -10874,7 +10828,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "SamacSys_Parts:CAPAE530X610N"
 			(at 183.1848 24.13 0)
 			(effects
 				(font
@@ -10948,7 +10902,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 35.56 42.418 90)
 			(effects
 				(font
@@ -11089,7 +11043,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 164.7952 31.75 0)
 			(effects
 				(font
@@ -11139,7 +11093,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 50.8 156.21 270)
+		(at 46.99 142.24 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11147,7 +11101,7 @@
 		(dnp no)
 		(uuid "ff6e6698-ae40-407d-96cc-3d117b036f70")
 		(property "Reference" "#PWR022"
-			(at 44.45 156.21 0)
+			(at 40.64 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11156,7 +11110,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 46.228 156.21 0)
+			(at 42.418 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11164,7 +11118,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 156.21 0)
+			(at 46.99 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11173,7 +11127,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 156.21 0)
+			(at 46.99 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11182,7 +11136,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 50.8 156.21 0)
+			(at 46.99 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
